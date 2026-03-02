@@ -16,22 +16,19 @@ import java.util.List;
 @CrossOrigin
 @RequestMapping("/ducks")
 public class DuckController {
-
     private DucksRepository ducksRepository;
-
     public DuckController(DucksRepository ducksRepository) {
         this.ducksRepository = ducksRepository;
     }
 
-
-   @PostMapping
+    @PostMapping
     public int add(@RequestBody DuckData duck) {
        try {
            return ducksRepository.add(duck);
        } catch (IOException e) {
            throw new RuntimeException(e);
        }
-   }
+    }
 
     @GetMapping
     public List<DuckData> findAll() {

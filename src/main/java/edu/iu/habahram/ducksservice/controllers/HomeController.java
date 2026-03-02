@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class HomeController implements ErrorController {
-    //@GetMapping("/")
+    @GetMapping("/")
     public String greetings()
     {
         return "Welcome to the ducks service!!";
