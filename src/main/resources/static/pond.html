@@ -30,7 +30,7 @@
 
     <script>
         async function getAllDucks() {
-            let host = "http://localhost:8080";
+            let host = "https://ducksservice-theextracrispy.onrender.com";
             let response = await fetch(host + "/ducks");
             return await response.json();
         }
