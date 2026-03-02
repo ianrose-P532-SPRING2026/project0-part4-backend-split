@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: production
+  servlet:
+    multipart:
+      enabled: true

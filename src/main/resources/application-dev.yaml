@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: ${db_host}
+    username: ${db_username}
+    password: ${db_password}
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  sql:
+    init:
+      mode: always
